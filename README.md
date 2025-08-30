@@ -6,8 +6,7 @@
 
 <br>
 
-# Nome do projeto
-
+# FarmTech na era da cloud computing
 ## Nome do grupo
 
 ## 👨‍🎓 Integrantes: 
