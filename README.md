@@ -50,17 +50,34 @@ Portanto, existindo a restrição legal e a necessidade de uma região mais pró
 
 
 ## 📁 Estrutura de pastas
-
-Dentre os arquivos e pastas presentes na raiz do projeto, definem-se:
-
-- <b>assets</b>: aqui estão os arquivos relacionados a elementos não-estruturados deste repositório, como imagens.
-
-- <b>document</b>: aqui estão todos os documentos do projeto que as atividades poderão pedir. Na subpasta "other", adicione documentos complementares e menos importantes.
-
-- <b>src</b>: Todo o código fonte criado para o desenvolvimento do projeto ao longo das 7 fases.
-
-- <b>README.md</b>: arquivo que serve como guia e explicação geral sobre o projeto (o mesmo que você está lendo agora).
-
+```
+challenge-fase5-FIAP/  
+├── assets/                          # Imagens, diagramas e outros arquivos visuais
+│  
+├── calculadora_AWS/                 # Arquivos de dados utilizados no projeto
+│   ├── tabela_de_precos_aws.webp    # Imagem da tabela de preços relacionada aas calculadoras da AWS
+│   └── diagrama_de_decisao_aws.webp # Imagem do diagrama de decisão na análise da calculadora AWS
+│
+├── data/                            # Arquivos de dados utilizados no projeto
+│   └── crop_yield.csv               # Dataset usado para treino do modelo
+│
+├── ir_alem/                         # Arquivos do projeto IR ALÉM
+│   ├── data/                        # Arquivos de dados utilizados no projeto
+│       └── crop_yield_data.csv      # Dataset usado para treino do modelo      
+│   ├── notebooks/                   # Notebook com análise e machine learning  
+│       └── main-ir-alem.ipynb       # Implementação e treino do modelo de ML "IR ALÉM"
+│   ├── wokwi/                       # Arquivos do simulador Wokwi (ESP32)
+│       └── diagram.json             # Diagrama do circuito
+│       └── libraries.txt            # Bibliotecas necessárias
+│       └── sketch.ino               # Código da simulação (Arduino)
+│       └── wokwi-project.txt        # Configuração do projeto Wokwi
+│   └── requirements.txt             # Imagem exportada do Diagrama ER
+│
+├── notebooks/                       # Notebook com análise e machine learning
+│   └── pbl_fase4.ipynb              # Implementação e treino do modelo de ML entrega 1
+│
+├── README.md                        # Documentação do projeto
+```
 ## 🔧 Como executar o código
 
 *Acrescentar as informações necessárias sobre pré-requisitos (IDEs, serviços, bibliotecas etc.) e instalação básica do projeto, descrevendo eventuais versões utilizadas. Colocar um passo a passo de como o leitor pode baixar o seu código e executá-lo a partir de sua máquina ou seu repositório. Considere a explicação organizada em fase.*
