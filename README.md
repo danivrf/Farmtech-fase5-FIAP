@@ -38,6 +38,61 @@ A solução proposta envolve inicialmente uma análise exploratória dos dados, 
 
 Todo o fluxo de trabalho foi documentado em um notebook Jupyter, que organiza o processo em células de código Python comentadas e células de markdown explicativas, garantindo a reprodutibilidade e clareza da solução. Como complemento, foi produzido um vídeo de demonstração, com até cinco minutos de duração, apresentando a execução prática do notebook e os principais resultados obtidos.*
 
+Análise e Modelagem de Dados (Notebook Jupyter)
+
+Este repositório apresenta uma solução de **análise exploratória** e **modelagem preditiva** aplicada a dados com variáveis como temperatura, umidade, precipitação e cultura (crop), visando compreender padrões e **estimar o rendimento (yield)**. 
+O propósito deste README é oferecer uma visão introdutória da solução e **conduzir você diretamente ao Jupyter Notebook**, onde está todo o passo a passo executável e a descrição completa.
+
+> 🔎 **Onde está o passo a passo?**  
+> Todo o fluxo detalhado — da exploração de dados ao treinamento e à avaliação — está no arquivo **`_pbl_fase4.ipynb`**. Abra-o e execute as células na sequência indicada.
+
+---
+
+## 🎯 Objetivos
+- Organizar e explorar o conjunto de dados (EDA).
+- Preparar os dados para modelagem (limpeza, normalização/escala, divisão em treino e teste).
+- Investigar estrutura de grupos/segmentos (clusterização) quando relevante.
+- Treinar e comparar múltiplos modelos de regressão.
+- Avaliar desempenho com métricas adequadas (ex.: **MAE** e **R²**).
+- Selecionar o melhor modelo e registrar aprendizados/insights.
+
+---
+
+## 🧭 Visão Geral do Fluxo (alto nível)
+1. **Ingestão e inspeção** do dataset (tipos, valores ausentes, estatísticas descritivas).
+2. **EDA**: análise de distribuição, correlação e possíveis outliers.
+3. **Pré-processamento**: seleção de features, normalização (quando necessário) e **train/test split**.
+4. **Clusterização (K-Means)**: investigação exploratória de grupos (opcional/explicativo).
+5. **Modelagem**: 
+   - Regressão Linear  
+   - Árvore de Decisão  
+   - **Random Forest** *(modelo campeão no notebook)*  
+   - SVR  
+   - Gradient Boosting
+6. **Avaliação**: comparação de métricas e escolha do modelo.
+7. **Conclusões**: interpretação e próximos passos.
+
+> 💡 Observação: os detalhes, gráficos e justificativas de cada etapa estão no notebook.
+
+---
+
+## 🧩 Tecnologias e Bibliotecas
+- **Python 3.10+**
+- **Jupyter Notebook / JupyterLab**
+- **pandas**, **scikit-learn**, **matplotlib**, **seaborn**
+
+Sugestão de `requirements.txt` minimalista:
+```
+pandas
+scikit-learn
+matplotlib
+seaborn
+jupyter
+```
+(Ajuste versões conforme seu ambiente.)
+
+---
+
 [Para mais informações sobre o banco de dados que utilizamos no projeto do ir além, visite o site cliclanco aqui.](https://www.kaggle.com/datasets/govindaramsriram/crop-yield-of-a-farm?resource=download)
 
 *Questão 1 – Qual a solução mais barata?
