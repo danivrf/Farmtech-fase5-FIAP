@@ -32,7 +32,7 @@ A solução proposta envolve inicialmente uma análise exploratória dos dados, 
 
 Todo o fluxo de trabalho foi documentado em um notebook Jupyter, que organiza o processo em células de código Python comentadas e células de markdown explicativas, garantindo a reprodutibilidade e clareza da solução. Como complemento, foi produzido um vídeo de demonstração, com até cinco minutos de duração, apresentando a execução prática do notebook e os principais resultados obtidos.*
 
-[Para mais informações sobre o banco de dados que utilizamos no projeto do ir além, visite o site]([https://www.google.com](https://www.kaggle.com/datasets/govindaramsriram/crop-yield-of-a-farm?resource=download)).
+[Para mais informações sobre o banco de dados que utilizamos no projeto do ir além, visite o site](https://www.kaggle.com/datasets/govindaramsriram/crop-yield-of-a-farm?resource=download)
 
 
 ## 📁 Estrutura de pastas
