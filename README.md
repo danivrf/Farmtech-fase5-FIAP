@@ -34,6 +34,14 @@ Todo o fluxo de trabalho foi documentado em um notebook Jupyter, que organiza o 
 
 [Para mais informações sobre o banco de dados que utilizamos no projeto do ir além, visite o site cliclanco aqui.](https://www.kaggle.com/datasets/govindaramsriram/crop-yield-of-a-farm?resource=download)
 
+*Questão 1 – Qual a solução mais barata?
+Após configurarmos a calculadora com os requisitos disponibilizados (2 cpus, 1 GIB de memória, até 5 gigabit de rede, 50 GB de armazenamento, máquina Linux e custos on-demand – 100%) e levantarmos os valores para as regiões de São Paulo e Virgínia do Norte, compilamos numa tabela para melhor visualização e comparação as três instâncias disponíveis. 
+Conforme observado na tabela, a instância mais barata, independente de compatibilidade, é a t4g.micro na região da Virgínia. Apesar de os valores absolutos serem baixos, proporcionalmente as instâncias localizadas em São Paulo são cerca de 50% mais caras que as da Virgínia. 
+
+Questão 2 – Existindo restrições legais para armazenamento no exterior e uma necessidade de acesso rápido aos dados dos sensores, qual a melhor opção?
+Para auxiliar a responder essa pergunta, criamos um diagrama de decisão baseado em 3 variáveis: restrições judiciais, compatibilidade com a arquitetura ARM e custos.
+Portanto, existindo a restrição legal e a necessidade de uma região mais próxima para uma menor latência no acesso aos dados, somente as instâncias da região de São Paulo são elegíveis. Sendo o stack compatível com arquitetura ARM, a opção t4g.micro seria a mais barata. Porém, nós optamos pela instância t3a.micro, pois ela apresenta um custo menor que  a t3.micro e uma compatibilidade maior do que a t4g.micro.*
+
 
 ## 📁 Estrutura de pastas
 
