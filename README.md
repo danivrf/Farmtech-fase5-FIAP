@@ -7,22 +7,28 @@
 <br>
 
 # FarmTech na era da cloud computing
+
 ## Nome do grupo
 
-## 👨‍🎓 Integrantes: 
+Rumo ao NEXT!
+
+## 👨‍🎓 Integrantes:
+
 - Felipe Livino dos Santos (RM 563187)
 - Daniel Veiga Rodrigues de Faria (RM 561410)
 - Tomas Haru Sakugawa Becker (RM 564147)
 - Daniel Tavares de Lima Freitas (RM 562625)
 - Gabriel Konno Carrozza (RM 564468)
 
-
 ## 👩‍🏫 Professores:
-### Tutor(a) 
-- <a href="https://www.linkedin.com/company/inova-fusca">Nome do Tutor</a>
-### Coordenador(a)
-- <a href="https://www.linkedin.com/company/inova-fusca">Nome do Coordenador</a>
 
+### Tutor(a)
+
+- Leonardo Ruiz Orabona
+
+### Coordenador(a)
+
+- ANDRÉ GODOI CHIOVATO
 
 ## 📜 Descrição
 
