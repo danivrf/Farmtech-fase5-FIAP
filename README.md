@@ -144,7 +144,7 @@ Para replicar a análise e treinar os modelos, siga os passos abaixo:
 ```
 pip install pandas matplotlib seaborn scikit-learn
 ```
-Execute o Notebook Jupyter: Abra e execute o arquivo _pbl_fase4.ipynb em um ambiente compatível (como Jupyter Lab ou VS Code).
+Execute o Notebook Jupyter: Abra e execute o arquivo `pbl_fase4.ipynb` em um ambiente compatível (como Jupyter Lab ou VS Code).
 
 ---
 
@@ -235,12 +235,16 @@ O objetivo deste projeto é desenvolver um sistema que classifique a saúde de u
 ##🤖 2. Desenvolvimento do Modelo de Machine Learning
 A implementação do modelo preditivo foi realizada em Python, utilizando bibliotecas como `Scikit-learn` e `Pandas`, com o objetivo de realizar a previsão do rendimento agrícola (`crop_yield_data`).
 
-- **Análise Exploratória**: Foi realizada uma análise detalhada dos dados, incluindo a visualização de histogramas e uma matriz de correlação para entender a relação entre as features [cite: Ir-alem.mp4].
-- **Treinamento e Validação**: Foram testados cinco algoritmos de regressão: Linear Regression, K-Neighbors Regressor, SVM, Bayesian Ridge e a ARD Regression. O modelo foi treinado com 80% dos dados e validado com os 20% restantes [cite: Ir-alem.mp4].
-- **Melhor Modelo**: O K-Neighbors Regressor foi o que apresentou o melhor desempenho, com o menor erro quadrático médio (MSE) e uma acurácia (score) de aproximadamente 99.8% no conjunto de teste [cite: Ir-alem.mp4].
-
-
-[Para mais informações sobre o banco de dados que utilizamos no projeto do ir além, visite o site cliclanco aqui.](https://www.kaggle.com/datasets/govindaramsriram/crop-yield-of-a-farm?resource=download)
+Para tornar o desafio mais realista, a implementação do modelo preditivo foi realizada com um dataset público que simula as condições de uma fazenda real.
+- **Data set utilizado**: Para o treinamento, foi utilizado um dataset encontrado na plataforma Kaggle, contendo dados realistas sobre produção agrícola. Este conjunto de dados inclui informações como chuva, tamanho da fazenda, horas de sol, uso de fertilizantes e rendimento da colheita.
+  - [➡️ Link para o Dataset no Kaggle: (https://www.kaggle.com/datasets/govindaramsriram/crop-yield-of-a-farm?resource=download)]
+- **Análise Exploratória**: Foi realizada uma análise detalhada dos dados, incluindo a visualização de histogramas e uma matriz de correlação para entender a relação entre as features.
+- **Treinamento e Validação**: Foram testados cinco algoritmos de regressão: Linear Regression, K-Neighbors Regressor, SVM, Bayesian Ridge e a ARD Regression. O modelo foi treinado com 80% dos dados e validado com os 20% restantes, com a ressalva de que a feature "qualidade do solo" foi removida para aumentar o realismo, uma vez que essa informação não seria coletada pelos sensores.
+- **Melhor Modelo**: O K-Neighbors Regressor foi o que apresentou o melhor desempenho, com o menor erro quadrático médio (MSE) e uma acurácia (score) de aproximadamente 99.8% no conjunto de teste
+  
+## 🎥 Vídeo Demonstrativo DO PROJETO "IR ALÉM".
+Confira a demonstração do circuito feito no wokwi e do modelo de machine learning neste video demonstrativo:
+▶️ [Assista ao vídeo no YouTube](https://youtu.be/Si3Xjev7Ma4)
 
 
 ## 🔧 Como executar o código (IR ALÉM)
@@ -256,7 +260,9 @@ Pré-requisitos:
   pip install virtualenv
 ```
 
-1. Clone o repositório
+1. Circuito Wokwi
+
+- **Clone o repositorio**
 
 - A pasta `wokwi/` contida na pasta `ir_alem/` contém os arquivos do circuito virtual que simula um **ESP32** com sensores conectados.
 - O circuito pode ser simulado diretamente no site [https://wokwi.com](https://wokwi.com), bastando importar os arquivos presente na pasta `/worki`:
@@ -268,7 +274,45 @@ O sketch irá:
 - Coletar dados dos sensores (DHT, LDR, botões)
 - Enviar os dados via HTTP para o WebService
 
+2. **Execuçao do Modelo de Machine Learning**
+Este projeto foi desenvolvido em **Python** e utiliza **Jupyter Notebook** para documentar todo o fluxo de análise de dados e Machine Learning.
 
+### Pré-requisitos
+
+- Python 3.9 ou superior  
+- Jupyter Notebook ou Jupyter Lab  
+- Bibliotecas Python:
+  - `pandas`
+  - `numpy`
+  - `matplotlib`
+  - `seaborn`
+  - `scikit-learn`(from `sklearn.model_selection` import `train_test_split`)
+
+> **Dica:** É recomendado criar um ambiente virtual antes de instalar as bibliotecas.
+
+### Passo a passo
+
+1. **Clonar o repositório**  
+   ```bash
+   git clone https://github.com/danivrf/challenge-fase5-FIAP.git
+2. **Navegar até a pasta do projeto**
+    ```bash
+   cd Farmtech-fase5-FIAP
+3. **Instalar as bibliotecas necessárias**
+   ```bash
+   pip install pandas numpy matplotlib seaborn scikit-learn
+4. **Abrir o notebook**
+   - Entre na pasta `ir_alem/`
+   - abra a pasta `notebook/`
+   - Abra o arquivo `.ipynb` no Jupyter Notebook ou Jupyter Lab
+ 5. **Executar o notebook**
+    - Execute as células na ordem, que incluem:
+        - Análise exploratória dos dados
+        - Preparação do dataset
+        - Construção e treinamento do modelo de Machine Learning
+        - Visualizações e gráficos de resultados
+ **Visualizar resultados**
+    - Os gráficos e outputs do notebook mostram insights sobre os dados coletados pelos sensores e as predições do modelo.
 
 ## 🗃 Histórico de lançamentos
 
