@@ -48,7 +48,10 @@ O propósito deste README é oferecer uma visão introdutória da solução e **
 
 ---
 
-## 🎯 Objetivos
+**🎯 Objetivos**
+
+O objetivo principal é construir um modelo de regressão capaz de prever o rendimento de uma cultura (em toneladas por hectare) a partir de um conjunto de dados que inclui informações sobre precipitação, umidade, temperatura e o tipo de cultura plantada como tambem: 
+
 - Organizar e explorar o conjunto de dados (EDA).
 - Preparar os dados para modelagem (limpeza, normalização/escala, divisão em treino e teste).
 - Investigar estrutura de grupos/segmentos (clusterização) quando relevante.
@@ -58,21 +61,28 @@ O propósito deste README é oferecer uma visão introdutória da solução e **
 
 ---
 
-## 🧭 Visão Geral do Fluxo (alto nível)
-1. **Ingestão e inspeção** do dataset (tipos, valores ausentes, estatísticas descritivas).
-2. **EDA**: análise de distribuição, correlação e possíveis outliers.
-3. **Pré-processamento**: seleção de features, normalização (quando necessário) e **train/test split**.
-4. **Clusterização (K-Means)**: investigação exploratória de grupos (opcional/explicativo).
-5. **Modelagem**: 
-   - Regressão Linear  
-   - Árvore de Decisão  
-   - **Random Forest** *(modelo campeão no notebook)*  
-   - SVR  
-   - Gradient Boosting
-6. **Avaliação**: comparação de métricas e escolha do modelo.
-7. **Conclusões**: interpretação e próximos passos.
+**🛠️ Metodologia Aplicada**
+
+O desenvolvimento do modelo seguiu as seguintes etapas principais:
+
+1. Análise Exploratória de Dados (EDA): Investigação inicial dos dados para entender suas características, distribuições e correlações entre as variáveis. Foi verificado que a base não possuía dados faltantes, mas apresentava variáveis em escalas muito diferentes.
+2. Pré-processamento: Transformação da variável categórica Crop em formato numérico utilizando One-Hot Encoding e padronização das features numéricas com StandardScaler para normalizar suas escalas.
+3. Clusterização (K-Means): Aplicação do Método do Cotovelo (Elbow Method) para identificar o número ideal de clusters (k=4) e segmentar os dados em grupos com características de rendimento similares (baixo, médio-baixo, médio e alto rendimento).
+4. Treinamento e Avaliação de Modelos: Foram treinados e avaliados cinco modelos de regressão para encontrar o de melhor performance.
 
 > 💡 Observação: os detalhes, gráficos e justificativas de cada etapa estão no notebook.
+
+🤖 Modelos Testados
+
+Foram avaliados os seguintes modelos de regressão:
+
+Regressão Linear
+Árvore de Decisão
+Random Forest (Modelo Campeão)
+Support Vector Regressor (SVR)
+Gradient Boosting
+
+O modelo Random Forest Regressor foi o que apresentou o melhor desempenho, com o menor Erro Absoluto Médio (MAE) e um Coeficiente de Determinação (R²) robusto
 
 ---
 
