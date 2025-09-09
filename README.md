@@ -252,7 +252,7 @@ Inicializa a comunicação serial para debug.
 
 - Envio de Dados (tarefaEnvioWebService):
    - **Formatação JSON**: A tarefa formata os dados coletados, incluindo um timestamp obtido via NTP, em um objeto JSON.
-   - **Requisição HTTP POST**: Utilizando a biblioteca HTTPClient, a tarefa envia os dados formatados para a URL do web service (https://newsfacd.herokuapp.com/journeybuilder/success).
+   - **Requisição HTTP POST**: Utilizando a biblioteca HTTPClient, a tarefa envia os dados formatados para a URL do web service.
    - **Feedback**: O código de resposta da requisição é impresso no monitor serial, permitindo verificar se o envio foi bem-sucedido.
 
 ##🤖 2. Desenvolvimento do Modelo de Machine Learning
