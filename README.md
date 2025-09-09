@@ -200,7 +200,7 @@ O objetivo deste projeto é desenvolver um sistema que classifique a saúde de u
 
 ## Arquitetura do circuito feito no worki.com
 
-<image src="ir_alem/wokwi/wokwi.png" alt="Circuito do projeto" width="100%" height="100%">
+<image src="ir_alem/wokwi/woki.png" alt="Circuito do projeto" width="100%" height="100%">
 
 
 [Para mais informações sobre o banco de dados que utilizamos no projeto do ir além, visite o site cliclanco aqui.](https://www.kaggle.com/datasets/govindaramsriram/crop-yield-of-a-farm?resource=download)
