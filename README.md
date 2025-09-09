@@ -164,7 +164,44 @@ O fluxograma abaixo ilustra o processo de decisão para a escolha da instância 
 Confira a demonstração da calculadora AWS neste video demonstrativo:
 ▶️ [Assista ao vídeo no YouTube](https://youtu.be/CYPGIqqn9D4 )
 
-## PROJETO “IR ALÉM”:
+## PROJETO “IR ALÉM”
+
+**Ir Além: Classificação da Saúde de Plantações com ESP32**
+Esta seção detalha a implementação de um sistema completo que utiliza um microcontrolador ESP32 e sensores para coletar dados em tempo real e um modelo de Machine Learning para classificar a saúde de plantações.
+
+1. **Definição do Projeto**
+O objetivo deste projeto é desenvolver um sistema que classifique a saúde de uma plantação em "Saudável" ou "Não saudável". Para isso, foi adotado um problema análogo com dados públicos: a previsão de rendimento agrícola (crop_yield), onde um rendimento alto pode ser associado a uma plantação saudável.
+
+## 🔌 1. Simulador de Circuito – Wokwi (ESP32)
+
+- **Conecta-se ao WiFi** automaticamente (`Wokwi-GUEST`).
+- **Envio Web**
+  - Forma JSON com campos `sensor`, `item`, `valor`, `timestamp`.
+  - Envia via HTTP POST e exibe código de resposta.
+- **Configura sensores e atuadores**:
+  - **Sensor DHT22** (temperatura e umidade).
+  - **Sensor de luminosidade** simula valor de luminosidade.
+  - **Sensor potenciômetro (umidade do solo)** para simular **valores de umidade do solo**.
+  - **Sensor potenciômetro (PH do solo)** para simular **valores de PH presentes no solo**.
+  - **Botão** para simular um **estado de chuva** e controlar novas tarefas de uminade e PH do solo. 
+- Coleta os dados a cada 5 segundos:
+  - Temperatura e umidade do ar, umidade do solo, PH do solo, luminosidade (via LDR).
+- **Funcionamento do botão para simular que esta chovendo**:
+  - O circuito também inclui um botão para simular a ocorrência de chuva e um relé para o acionamento de uma bomba d'água, permitindo testes de resposta do sistema a eventos específicos.
+
+  ## Resumo do Circuito
+
+- **DHT22** — pino 19; use resistor de pull-up de 10 kΩ entre DATA e 3 V3.
+- **Sensor de Umidade do Solo** — pino 35. 
+- **Sensor de pH do Solo”** — pino 32.
+- **LDR(luminosidade)** — pino 34 (ADC1_CH6); formar divisor com resistor de 10 kΩ.
+- **Botão “CHUVA”** — pino 22.
+- **Alimentação** — ESP32 DevKit v1 alimentado por 3V e 5V USB;
+
+## Arquitetura do circuito feito no worki.com
+
+
+
 
 [Para mais informações sobre o banco de dados que utilizamos no projeto do ir além, visite o site cliclanco aqui.](https://www.kaggle.com/datasets/govindaramsriram/crop-yield-of-a-farm?resource=download)
 
