@@ -38,6 +38,36 @@ A solução proposta envolve inicialmente uma análise exploratória dos dados, 
 
 Todo o fluxo de trabalho foi documentado em um notebook Jupyter, que organiza o processo em células de código Python comentadas e células de markdown explicativas, garantindo a reprodutibilidade e clareza da solução. Como complemento, foi produzido um vídeo de demonstração, com até cinco minutos de duração, apresentando a execução prática do notebook e os principais resultados obtidos.*
 
+## 📁 Estrutura de pastas
+```
+challenge-fase5-FIAP/  
+├── assets/                          # Imagens, diagramas e outros arquivos visuais
+│  
+├── calculadora_AWS/                 # Arquivos de dados utilizados no projeto
+│   ├── tabela_de_precos_aws.webp    # Imagem da tabela de preços relacionada aas calculadoras da AWS
+│   └── diagrama_de_decisao_aws.webp # Imagem do diagrama de decisão na análise da calculadora AWS
+│
+├── data/                            # Arquivos de dados utilizados no projeto
+│   └── crop_yield.csv               # Dataset usado para treino do modelo
+│
+├── ir_alem/                         # Arquivos do projeto IR ALÉM
+│   ├── data/                        # Arquivos de dados utilizados no projeto
+│       └── crop_yield_data.csv      # Dataset usado para treino do modelo      
+│   ├── notebooks/                   # Notebook com análise e machine learning  
+│       └── main-ir-alem.ipynb       # Implementação e treino do modelo de ML "IR ALÉM"
+│   ├── wokwi/                       # Arquivos do simulador Wokwi (ESP32)
+│       └── diagram.json             # Diagrama do circuito
+│       └── libraries.txt            # Bibliotecas necessárias
+│       └── sketch.ino               # Código da simulação (Arduino)
+│       └── wokwi-project.txt        # Configuração do projeto Wokwi
+│   └── requirements.txt             # Imagem exportada do Diagrama ER
+│
+├── notebooks/                       # Notebook com análise e machine learning
+│   └── pbl_fase4.ipynb              # Implementação e treino do modelo de ML entrega 1
+│
+├── README.md                        # Documentação do projeto
+```
+
 ## Entrega 1: Análise e Modelagem de Dados (Notebook Jupyter) 
 
 *Este repositório apresenta uma solução de **análise exploratória** e **modelagem preditiva** aplicada a dados com variáveis como temperatura, umidade, precipitação e cultura (crop), visando compreender padrões e **estimar o rendimento (yield)**. 
@@ -169,7 +199,7 @@ Confira a demonstração da calculadora AWS neste video demonstrativo:
 **Ir Além: Classificação da Saúde de Plantações com ESP32**
 Esta seção detalha a implementação de um sistema completo que utiliza um microcontrolador ESP32 e sensores para coletar dados em tempo real e um modelo de Machine Learning para classificar a saúde de plantações.
 
-1. **Definição do Projeto**
+**Definição do Projeto**
 O objetivo deste projeto é desenvolver um sistema que classifique a saúde de uma plantação em "Saudável" ou "Não saudável". Para isso, foi adotado um problema análogo com dados públicos: a previsão de rendimento agrícola (crop_yield), onde um rendimento alto pode ser associado a uma plantação saudável.
 
 ## 🔌 1. Simulador de Circuito – Wokwi (ESP32)
@@ -195,48 +225,49 @@ O objetivo deste projeto é desenvolver um sistema que classifique a saúde de u
 - **Sensor de Umidade do Solo** — pino 35. 
 - **Sensor de pH do Solo”** — pino 32.
 - **LDR(luminosidade)** — pino 34 (ADC1_CH6); formar divisor com resistor de 10 kΩ.
-- **Botão “CHUVA”** — pino 22.
+- **Botão “CHUVA”** — pino 22; configurado como `INPUT`.
 - **Alimentação** — ESP32 DevKit v1 alimentado por 3V e 5V USB;
 
 ## Arquitetura do circuito feito no worki.com
 
 <image src="ir_alem/wokwi/woki.png" alt="Circuito do projeto" width="100%" height="100%">
 
+##🤖 2. Desenvolvimento do Modelo de Machine Learning
+A implementação do modelo preditivo foi realizada em Python, utilizando bibliotecas como `Scikit-learn` e `Pandas`, com o objetivo de realizar a previsão do rendimento agrícola (`crop_yield_data`).
+
+- **Análise Exploratória**: Foi realizada uma análise detalhada dos dados, incluindo a visualização de histogramas e uma matriz de correlação para entender a relação entre as features [cite: Ir-alem.mp4].
+- **Treinamento e Validação**: Foram testados cinco algoritmos de regressão: Linear Regression, K-Neighbors Regressor, SVM, Bayesian Ridge e a ARD Regression. O modelo foi treinado com 80% dos dados e validado com os 20% restantes [cite: Ir-alem.mp4].
+- **Melhor Modelo**: O K-Neighbors Regressor foi o que apresentou o melhor desempenho, com o menor erro quadrático médio (MSE) e uma acurácia (score) de aproximadamente 99.8% no conjunto de teste [cite: Ir-alem.mp4].
+
 
 [Para mais informações sobre o banco de dados que utilizamos no projeto do ir além, visite o site cliclanco aqui.](https://www.kaggle.com/datasets/govindaramsriram/crop-yield-of-a-farm?resource=download)
 
-## 📁 Estrutura de pastas
-```
-challenge-fase5-FIAP/  
-├── assets/                          # Imagens, diagramas e outros arquivos visuais
-│  
-├── calculadora_AWS/                 # Arquivos de dados utilizados no projeto
-│   ├── tabela_de_precos_aws.webp    # Imagem da tabela de preços relacionada aas calculadoras da AWS
-│   └── diagrama_de_decisao_aws.webp # Imagem do diagrama de decisão na análise da calculadora AWS
-│
-├── data/                            # Arquivos de dados utilizados no projeto
-│   └── crop_yield.csv               # Dataset usado para treino do modelo
-│
-├── ir_alem/                         # Arquivos do projeto IR ALÉM
-│   ├── data/                        # Arquivos de dados utilizados no projeto
-│       └── crop_yield_data.csv      # Dataset usado para treino do modelo      
-│   ├── notebooks/                   # Notebook com análise e machine learning  
-│       └── main-ir-alem.ipynb       # Implementação e treino do modelo de ML "IR ALÉM"
-│   ├── wokwi/                       # Arquivos do simulador Wokwi (ESP32)
-│       └── diagram.json             # Diagrama do circuito
-│       └── libraries.txt            # Bibliotecas necessárias
-│       └── sketch.ino               # Código da simulação (Arduino)
-│       └── wokwi-project.txt        # Configuração do projeto Wokwi
-│   └── requirements.txt             # Imagem exportada do Diagrama ER
-│
-├── notebooks/                       # Notebook com análise e machine learning
-│   └── pbl_fase4.ipynb              # Implementação e treino do modelo de ML entrega 1
-│
-├── README.md                        # Documentação do projeto
-```
-## 🔧 Como executar o código
 
-*Acrescentar as informações necessárias sobre pré-requisitos (IDEs, serviços, bibliotecas etc.) e instalação básica do projeto, descrevendo eventuais versões utilizadas. Colocar um passo a passo de como o leitor pode baixar o seu código e executá-lo a partir de sua máquina ou seu repositório. Considere a explicação organizada em fase.*
+## 🔧 Como executar o código (IR ALÉM)
+
+Para executar o código deste projeto, siga os passos abaixo:
+
+Pré-requisitos:
+
+- Python 3.8+ instalado
+- Virtualenv
+
+```
+  pip install virtualenv
+```
+
+1. Clone o repositório
+
+- A pasta `wokwi/` contida na pasta `ir_alem/` contém os arquivos do circuito virtual que simula um **ESP32** com sensores conectados.
+- O circuito pode ser simulado diretamente no site [https://wokwi.com](https://wokwi.com), bastando importar os arquivos presente na pasta `/worki`:
+
+-Certifique-se de que o ESP32 esteja conectado ao WiFi (Wokwi-GUEST)
+
+O sketch irá:
+
+- Coletar dados dos sensores (DHT, LDR, botões)
+- Enviar os dados via HTTP para o WebService
+
 
 
 ## 🗃 Histórico de lançamentos
