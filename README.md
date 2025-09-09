@@ -134,6 +134,10 @@ Utilizando a Calculadora de Preços da AWS, foi realizada uma estimativa de cust
 - Armazenamento (EBS): 50 GB (HD de Propósito Geral - gp3)
 - A comparação foi feita entre as regiões de São Paulo (sa-east-1) e Virgínia do Norte (us-east-1), considerando as três instâncias que atendem aos requisitos.
 
+**📷 Tabela de Preços AWS**
+
+![Tabela de Preços AWS](calculadora_AWS/tabela_de_precos_aws.webp)
+
 
 *Questão 1 – Qual a solução mais barata?
 Após configurarmos a calculadora com os requisitos disponibilizados (2 cpus, 1 GIB de memória, até 5 gigabit de rede, 50 GB de armazenamento, máquina Linux e custos on-demand – 100%) e levantarmos os valores para as regiões de São Paulo e Virgínia do Norte, compilamos numa tabela para melhor visualização e comparação as três instâncias disponíveis. 
