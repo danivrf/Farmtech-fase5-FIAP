@@ -38,13 +38,13 @@ A solução proposta envolve inicialmente uma análise exploratória dos dados, 
 
 Todo o fluxo de trabalho foi documentado em um notebook Jupyter, que organiza o processo em células de código Python comentadas e células de markdown explicativas, garantindo a reprodutibilidade e clareza da solução. Como complemento, foi produzido um vídeo de demonstração, com até cinco minutos de duração, apresentando a execução prática do notebook e os principais resultados obtidos.*
 
-Análise e Modelagem de Dados (Notebook Jupyter)
+## Análise e Modelagem de Dados (Notebook Jupyter)
 
 Este repositório apresenta uma solução de **análise exploratória** e **modelagem preditiva** aplicada a dados com variáveis como temperatura, umidade, precipitação e cultura (crop), visando compreender padrões e **estimar o rendimento (yield)**. 
 O propósito deste README é oferecer uma visão introdutória da solução e **conduzir você diretamente ao Jupyter Notebook**, onde está todo o passo a passo executável e a descrição completa.
 
 > 🔎 **Onde está o passo a passo?**  
-> Todo o fluxo detalhado — da exploração de dados ao treinamento e à avaliação — está no arquivo **`_pbl_fase4.ipynb`**. Abra-o e execute as células na sequência indicada.
+> Todo o fluxo detalhado — da exploração de dados ao treinamento e à avaliação — está no arquivo **`_pbl_fase4.ipynb`** contido na pasta **`notebook`**. Abra-o e execute as células na sequência indicada.
 
 ---
 
