@@ -232,6 +232,29 @@ O objetivo deste projeto é desenvolver um sistema que classifique a saúde de u
 
 <image src="ir_alem/wokwi/woki.png" alt="Circuito do projeto" width="100%" height="100%">
 
+**Análise do Código do Circuito**
+O código em C++ (`sketch.ino`) para o ESP32 é estruturado para garantir a coleta contínua e o envio confiável dos dados dos sensores. Abaixo estão os principais blocos de funcionamento:
+
+Configuração Inicial (setup):
+
+Inicializa a comunicação serial para debug.
+
+- Configura os pinos dos sensores como entradas (INPUT e INPUT_PULLUP).
+   - Inicializa a comunicação serial para debug.
+   - Configura os pinos dos sensores como entradas (`INPUT` e `INPUT_PULLUP`).
+   - Inicia o sensor DHT22.
+   - Estabelece a conexão com a rede Wi-Fi e configura um timer para reconexão automática em caso de falha.
+
+- Loop Principal (`loop`):
+   - **Leitura dos Sensores**: A cada 5 segundos (INTERVALO_COLETA_MS), o loop principal executa a leitura de todos os sensores conectados. Os valores analógicos (LDR, umidade do solo, pH) são mapeados para escalas padronizadas (0-1000 para umidade, 0-140 para pH).
+   - **Simulador de Chuva**: O código monitora continuamente o estado do botão. Ao ser pressionado, ele inverte o estado da variável chovendo, simulando a ocorrência ou a parada da chuva. Um mecanismo de debounce evita leituras múltiplas e instáveis.
+   - **Criação de Tarefa**: Após cada ciclo de leitura, os dados são agrupados em uma estrutura (SensorDataPayload) e uma nova tarefa (tarefaEnvioWebService) é criada para lidar com o envio dos dados pela rede, garantindo que o loop principal não seja bloqueado.
+
+- Envio de Dados (tarefaEnvioWebService):
+   - **Formatação JSON**: A tarefa formata os dados coletados, incluindo um timestamp obtido via NTP, em um objeto JSON.
+   - **Requisição HTTP POST**: Utilizando a biblioteca HTTPClient, a tarefa envia os dados formatados para a URL do web service (https://newsfacd.herokuapp.com/journeybuilder/success).
+   - **Feedback**: O código de resposta da requisição é impresso no monitor serial, permitindo verificar se o envio foi bem-sucedido.
+
 ##🤖 2. Desenvolvimento do Modelo de Machine Learning
 A implementação do modelo preditivo foi realizada em Python, utilizando bibliotecas como `Scikit-learn` e `Pandas`, com o objetivo de realizar a previsão do rendimento agrícola (`crop_yield_data`).
 
