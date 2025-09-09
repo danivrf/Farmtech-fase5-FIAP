@@ -145,8 +145,24 @@ Utilizando a Calculadora de Preços da AWS, foi realizada uma estimativa de cust
 *Para auxiliar a responder essa pergunta, criamos um diagrama de decisão baseado em 3 variáveis: **restrições judiciais**, **compatibilidade com a arquitetura ARM** e **custos**.
 Portanto, existindo a restrição legal e a necessidade de uma região mais próxima para uma menor latência no acesso aos dados, somente as instâncias da região de São Paulo são elegíveis. Sendo o stack compatível com arquitetura ARM, a opção `t4g.micro` seria a mais barata. Porém, nós optamos pela instância `t3a.micro`, pois ela apresenta um custo menor que  a t3.micro e uma compatibilidade maior do que a t4g.micro.*
 
+O fluxograma abaixo ilustra o processo de decisão para a escolha da instância ideal, partindo dos requisitos técnicos e passando pelas restrições de negócio como localização e compatibilidade de arquitetura.
+
+**Restrição Legal/Latência?**
+
+- Sim ➡️ Prosseguir com a região de São Paulo.
+- Não ➡️ Escolher t4g.micro na Virgínia do Norte (menor custo).
+
+**Análise em São Paulo: Compatibilidade da Arquitetura?**
+
+- Compatível com ARM? ➡️ Escolher t4g.micro (menor custo em SP).
+- Incompatível com ARM? ➡️ Comparar instâncias x86 (t3a.micro vs. t3.micro).
+
 **Diagrama de decisão**
 ![Diagrama de decisão](calculadora_AWS/diagrama_de_decisao_aws.webp)
+
+## 🎥 Vídeo Demonstrativo da calculadora AWS.
+Confira a demonstração da calculadora AWS neste video demonstrativo:
+▶️ [Assista ao vídeo no YouTube](https://youtu.be/CYPGIqqn9D4 )
 
 ## PROJETO “IR ALÉM”:
 
