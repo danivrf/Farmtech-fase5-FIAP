@@ -194,7 +194,7 @@ O fluxograma abaixo ilustra o processo de decisão para a escolha da instância 
 Confira a demonstração da calculadora AWS neste video demonstrativo:
 ▶️ [Assista ao vídeo no YouTube](https://youtu.be/CYPGIqqn9D4 )
 
-## PROJETO “IR ALÉM”
+## 🚀 PROJETO “IR ALÉM”
 
 **Ir Além: Classificação da Saúde de Plantações com ESP32**
 Esta seção detalha a implementação de um sistema completo que utiliza um microcontrolador ESP32 e sensores para coletar dados em tempo real e um modelo de Machine Learning para classificar a saúde de plantações.
