@@ -46,6 +46,10 @@ O propósito deste README é oferecer uma visão introdutória da solução e **
 > 🔎 **Onde está o passo a passo?**  
 > Todo o fluxo detalhado — da exploração de dados ao treinamento e à avaliação — está no arquivo **`_pbl_fase4.ipynb`** contido na pasta **`notebook`**. Abra-o e execute as células na sequência indicada.
 
+## 🎥 Vídeo Demonstrativo
+Confira o funcionamento do projeto neste vídeo demonstrativo:
+▶️ [Assista ao vídeo no YouTube](https://youtu.be/IVPD5y_hspw)
+
 ---
 
 **🎯 Objetivos**
