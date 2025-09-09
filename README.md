@@ -65,24 +65,24 @@ O objetivo principal é construir um modelo de regressão capaz de prever o rend
 
 O desenvolvimento do modelo seguiu as seguintes etapas principais:
 
-1. Análise Exploratória de Dados (EDA): Investigação inicial dos dados para entender suas características, distribuições e correlações entre as variáveis. Foi verificado que a base não possuía dados faltantes, mas apresentava variáveis em escalas muito diferentes.
-2. Pré-processamento: Transformação da variável categórica Crop em formato numérico utilizando One-Hot Encoding e padronização das features numéricas com StandardScaler para normalizar suas escalas.
-3. Clusterização (K-Means): Aplicação do Método do Cotovelo (Elbow Method) para identificar o número ideal de clusters (k=4) e segmentar os dados em grupos com características de rendimento similares (baixo, médio-baixo, médio e alto rendimento).
-4. Treinamento e Avaliação de Modelos: Foram treinados e avaliados cinco modelos de regressão para encontrar o de melhor performance.
+1. **Análise Exploratória de Dados (EDA)**: Investigação inicial dos dados para entender suas características, distribuições e correlações entre as variáveis. Foi verificado que a base não possuía dados faltantes, mas apresentava variáveis em escalas muito diferentes.
+2. **Pré-processamento**: Transformação da variável categórica Crop em formato numérico utilizando One-Hot Encoding e padronização das features numéricas com StandardScaler para normalizar suas escalas.
+3. **Clusterização (K-Means)**: Aplicação do Método do Cotovelo (Elbow Method) para identificar o número ideal de clusters (k=4) e segmentar os dados em grupos com características de rendimento similares (baixo, médio-baixo, médio e alto rendimento).
+4. **Treinamento e Avaliação de Modelos**: Foram treinados e avaliados cinco modelos de regressão para encontrar o de melhor performance.
 
 > 💡 Observação: os detalhes, gráficos e justificativas de cada etapa estão no notebook.
 
-🤖 Modelos Testados
+**🤖 Modelos Testados**
 
 Foram avaliados os seguintes modelos de regressão:
 
-Regressão Linear
-Árvore de Decisão
-Random Forest (Modelo Campeão)
-Support Vector Regressor (SVR)
-Gradient Boosting
+- Regressão Linear
+- Árvore de Decisão
+- Random Forest (Modelo Campeão)
+- Support Vector Regressor (SVR)
+- Gradient Boosting
 
-O modelo Random Forest Regressor foi o que apresentou o melhor desempenho, com o menor Erro Absoluto Médio (MAE) e um Coeficiente de Determinação (R²) robusto
+*O modelo Random Forest Regressor foi o que apresentou o melhor desempenho, com o menor Erro Absoluto Médio (MAE) e um Coeficiente de Determinação (R²) robusto.*
 
 ---
 
