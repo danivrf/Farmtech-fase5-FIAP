@@ -38,10 +38,10 @@ A solução proposta envolve inicialmente uma análise exploratória dos dados, 
 
 Todo o fluxo de trabalho foi documentado em um notebook Jupyter, que organiza o processo em células de código Python comentadas e células de markdown explicativas, garantindo a reprodutibilidade e clareza da solução. Como complemento, foi produzido um vídeo de demonstração, com até cinco minutos de duração, apresentando a execução prática do notebook e os principais resultados obtidos.*
 
-## Análise e Modelagem de Dados (Notebook Jupyter)
+## Entrega 1: Análise e Modelagem de Dados (Notebook Jupyter) 
 
-Este repositório apresenta uma solução de **análise exploratória** e **modelagem preditiva** aplicada a dados com variáveis como temperatura, umidade, precipitação e cultura (crop), visando compreender padrões e **estimar o rendimento (yield)**. 
-O propósito deste README é oferecer uma visão introdutória da solução e **conduzir você diretamente ao Jupyter Notebook**, onde está todo o passo a passo executável e a descrição completa.
+*Este repositório apresenta uma solução de **análise exploratória** e **modelagem preditiva** aplicada a dados com variáveis como temperatura, umidade, precipitação e cultura (crop), visando compreender padrões e **estimar o rendimento (yield)**. 
+O propósito deste README é oferecer uma visão introdutória da solução e **conduzir você diretamente ao Jupyter Notebook**, onde está todo o passo a passo executável e a descrição completa.*
 
 > 🔎 **Onde está o passo a passo?**  
 > Todo o fluxo detalhado — da exploração de dados ao treinamento e à avaliação — está no arquivo **`_pbl_fase4.ipynb`** contido na pasta **`notebook`**. Abra-o e execute as células na sequência indicada.
@@ -105,9 +105,35 @@ jupyter
 ```
 (Ajuste versões conforme seu ambiente.)
 
+## 🔧 Como executar o código
+
+Para replicar a análise e treinar os modelos, siga os passos abaixo:
+
+1. Clone este repositório para a sua máquina local.
+2. Instale as dependências necessárias (recomenda-se o uso de um ambiente virtual):
+```
+pip install pandas matplotlib seaborn scikit-learn
+```
+Execute o Notebook Jupyter: Abra e execute o arquivo _pbl_fase4.ipynb em um ambiente compatível (como Jupyter Lab ou VS Code).
+
 ---
 
-[Para mais informações sobre o banco de dados que utilizamos no projeto do ir além, visite o site cliclanco aqui.](https://www.kaggle.com/datasets/govindaramsriram/crop-yield-of-a-farm?resource=download)
+## Entrega 2: Estimativa de Custos na Nuvem (AWS)
+
+*Esta seção aborda a análise de custos para a hospedagem da API e do modelo de Machine Learning em uma estrutura de computação em nuvem, utilizando a Amazon Web Services (AWS). A análise compara custos entre diferentes regiões e tipos de instância para encontrar a solução mais viável considerando os requisitos técnicos e de negócio.*
+
+1. Análise de Custo: São Paulo vs. Virgínia do Norte
+
+Utilizando a Calculadora de Preços da AWS, foi realizada uma estimativa de custos para uma instância EC2 On-Demand com as seguintes configurações mínimas:
+
+- Sistema Operacional: Linux
+
+- vCPUs: 2
+- Memória: 1 GiB
+- Desempenho da Rede: Até 5 Gigabit
+- Armazenamento (EBS): 50 GB (HD de Propósito Geral - gp3)
+- A comparação foi feita entre as regiões de São Paulo (sa-east-1) e Virgínia do Norte (us-east-1), considerando as três instâncias que atendem aos requisitos.
+
 
 *Questão 1 – Qual a solução mais barata?
 Após configurarmos a calculadora com os requisitos disponibilizados (2 cpus, 1 GIB de memória, até 5 gigabit de rede, 50 GB de armazenamento, máquina Linux e custos on-demand – 100%) e levantarmos os valores para as regiões de São Paulo e Virgínia do Norte, compilamos numa tabela para melhor visualização e comparação as três instâncias disponíveis. 
@@ -117,6 +143,7 @@ Questão 2 – Existindo restrições legais para armazenamento no exterior e um
 Para auxiliar a responder essa pergunta, criamos um diagrama de decisão baseado em 3 variáveis: restrições judiciais, compatibilidade com a arquitetura ARM e custos.
 Portanto, existindo a restrição legal e a necessidade de uma região mais próxima para uma menor latência no acesso aos dados, somente as instâncias da região de São Paulo são elegíveis. Sendo o stack compatível com arquitetura ARM, a opção t4g.micro seria a mais barata. Porém, nós optamos pela instância t3a.micro, pois ela apresenta um custo menor que  a t3.micro e uma compatibilidade maior do que a t4g.micro.*
 
+[Para mais informações sobre o banco de dados que utilizamos no projeto do ir além, visite o site cliclanco aqui.](https://www.kaggle.com/datasets/govindaramsriram/crop-yield-of-a-farm?resource=download)
 
 ## 📁 Estrutura de pastas
 ```
