@@ -127,7 +127,6 @@ Execute o Notebook Jupyter: Abra e execute o arquivo _pbl_fase4.ipynb em um ambi
 Utilizando a Calculadora de Preços da AWS, foi realizada uma estimativa de custos para uma instância EC2 On-Demand com as seguintes configurações mínimas:
 
 - Sistema Operacional: Linux
-
 - vCPUs: 2
 - Memória: 1 GiB
 - Desempenho da Rede: Até 5 Gigabit
@@ -135,8 +134,22 @@ Utilizando a Calculadora de Preços da AWS, foi realizada uma estimativa de cust
 - A comparação foi feita entre as regiões de São Paulo (sa-east-1) e Virgínia do Norte (us-east-1), considerando as três instâncias que atendem aos requisitos.
 
 **📷 Tabela de Preços AWS**
-
 ![Tabela de Preços AWS](calculadora_AWS/tabela_de_precos_aws.webp)
+
+**Conclusão da Análise de Custo**
+
+*Conforme observado na tabela, a instância mais barata, desconsiderando qualquer restrição, é a `t4g.micro` na região da Virgínia do Norte. Proporcionalmente, as instâncias localizadas em São Paulo são aproximadamente 50% mais caras que as equivalentes na Virgínia do Norte.*
+
+2. Escolha da Instância e Justificativa
+   
+*Apesar da Virgínia do Norte oferecer o menor custo, a escolha final da instância deve considerar as seguintes restrições do projeto:*
+   - **Restrições Legais**: A necessidade de manter os dados dos sensores em território nacional por questões de soberania de dados.
+   - **Latência**: Para uma API que precisa de acesso rápido aos dados, uma região geograficamente mais próxima (São Paulo) é preferível para minimizar o tempo de resposta da rede.
+Considerando esses fatores, apenas as instâncias da região de São Paulo são elegíveis para a nossa solução.
+
+**Diagrama de decisão**
+![Diagrama de decisão](calculadora_AWS/tabela_de_precos_aws.webp)
+
 
 
 *Questão 1 – Qual a solução mais barata?
